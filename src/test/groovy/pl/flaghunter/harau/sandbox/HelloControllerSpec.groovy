@@ -15,12 +15,12 @@ class HelloControllerSpec extends Specification {
 	@Autowired
 	TestRestTemplate restTemplate
 
-	def "should return Fooooo for root path"() {
+	def "should return Foooo for root path"() {
 		when:
 		ResponseEntity entity = this.restTemplate.getForEntity("/", String.class);
 
 		then:
 		entity.statusCode == HttpStatus.OK
-		entity.body == "Fooooo"
+		entity.body == "Foooo"
 	}
 }
