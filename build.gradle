@@ -11,6 +11,7 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: "groovy"
 apply plugin: 'spring-boot'
 
 sourceCompatibility = 1.8
@@ -25,4 +26,9 @@ dependencies {
         exclude module: "spring-boot-starter-tomcat"
     }
     compile("org.springframework.boot:spring-boot-starter-jetty")
+    compile("org.springframework.boot:spring-boot-starter-test")
+    compile "org.codehaus.groovy:groovy-all:2.4.1"
+
+    testCompile "org.spockframework:spock-core:1.1-groovy-2.4-rc-3"
+    testCompile "org.spockframework:spock-spring:1.1-groovy-2.4-rc-3"
 }
